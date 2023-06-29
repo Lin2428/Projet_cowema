@@ -62,3 +62,20 @@ h1{
     height: 40px;
     border-radius: 50%;
 }
+
+/** text**/
+.text-small{
+    font-size: 15px;
+}
+
+.detail_image{
+    max-width: 150px;
+}
+
+.block_detail_image{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: rgba(95, 169, 230, 0.719);
+}

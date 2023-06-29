@@ -55,18 +55,17 @@ function find_stagiaire($id) {
  * 
  * 
  */
-
 function create_stagiaire($nom, $prenom, $email, $photo, $date_debut, $date_fin, $commentaire) {
     $query = db()->prepare("INSERT INTO stagiaires (nom, prenom, email, photo, date_debut, date_fin, commentaire) VALUES (:nom, :prenom, :email, :photo, :date_debut ,:date_fin, :commentaire)");
     $query->execute([ 
-    "nom" => $nom,
-    "prenom" =>  $prenom,
-    "email" =>  $email,
-    "photo" =>  $photo,
-    "date_debut" =>  $date_debut,
-    "date_fin" =>  $date_fin,
-    "commentaire" =>  $commentaire
-]);
+        "nom" => $nom,
+        "prenom" =>  $prenom,
+        "email" =>  $email,
+        "photo" =>  $photo,
+        "date_debut" =>  $date_debut,
+        "date_fin" =>  $date_fin,
+        "commentaire" =>  $commentaire
+    ]);
 }
 /**
  * Modification d'un' stagiaire
@@ -75,14 +74,14 @@ function create_stagiaire($nom, $prenom, $email, $photo, $date_debut, $date_fin,
 function update_stagiaire($id, $nom, $prenom, $email, $photo, $date_debut, $date_fin, $commentaire) {
     $query = db()->prepare("UPDATE stagiaires SET  nom = :nom, prenom = :prenom, email = :email, date_debut = :date_debut, date_fin = :date_fin, commentaire = :commentaire, photo = :photo WHERE id = :id");
     $query->execute([
-    "id" => $id,
-    "nom" => $nom,
-    "prenom" =>  $prenom,
-    "email" =>  $email,
-    "photo" =>  $photo,
-    "date_debut" =>  $date_debut,
-    "date_fin" =>  $date_fin,
-    "commentaire" =>  $commentaire
+        "id" => $id,
+        "nom" => $nom,
+        "prenom" =>  $prenom,
+        "email" =>  $email,
+        "photo" =>  $photo,
+        "date_debut" =>  $date_debut,
+        "date_fin" =>  $date_fin,
+        "commentaire" =>  $commentaire
 ]);
 }
 
@@ -178,4 +177,18 @@ function read_flash_message() {
     }
 
     return '';
+}
+
+/**
+ * Affichage des informations d'un stgiaire en détails
+ * @param string $titre le titre de l'information
+ * @param string $valeur la valeur de l'information
+ * @return string $html le code d'affichage
+ */
+function details_stagiaire($titre, $valeur){
+ $html = '<h5> '. $titre.':'.'<span class="text-small"> ';
+ $html .= $valeur. '</span>';
+ $html .= '</h5>';
+
+ return $html;
 }

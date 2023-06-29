@@ -13,8 +13,8 @@ if (!empty($_POST['id'])) {
 
   flash('Le stagiaire a bien été supprimer');
 } else {
-  flash("Il ne s'est absolument rien passé", type: "danger");
+  flash("Il ne s'est absolument rien passé", "danger");
 }
 
-header('Location: /?read');
+header('Location: ?read');
 exit;

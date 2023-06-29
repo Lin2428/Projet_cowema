@@ -12,6 +12,8 @@ if (isset($_GET["read"]) || empty($_GET)) {
     require 'update.php';
 } elseif(isset($_GET['create'])) {
     require 'create.php';
+}elseif(isset($_GET['details'])){
+    require 'details.php';
 }
 
 //Inclusion du code html footer

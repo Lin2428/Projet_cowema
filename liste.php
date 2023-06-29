@@ -16,7 +16,7 @@ if (isset($_GET['accueil'])) {
 
     <div class="d-flex justify-content-between mb-4">
       <h1>Gestion de stagiaires</h1>
-      <div><a href="/?create" class="btn btn-primary">Nouveau</a></div>
+      <div><a href="?create" class="btn btn-primary">Nouveau</a></div>
     </div>
 
     <table class="table table-bordered">
@@ -29,7 +29,7 @@ if (isset($_GET['accueil'])) {
           <th scope="col">Email</th>
           <th scope="col">Date début</th>
           <th scope="col">Date fin</th>
-          <th scope="col">Commentaire</th>
+          <th scope="col">Détails</th>
           <th scope="col">Actions</th>
         </tr>
       </thead>
@@ -45,7 +45,7 @@ if (isset($_GET['accueil'])) {
             <td><?= $stagiaire['email'] ?></th>
             <td><?= $stagiaire['date_debut'] ?></td>
             <td><?= $stagiaire['date_fin'] ?></td>
-            <td><?= $stagiaire['commentaire'] ?></td>
+            <td><a href="?details=<?= $stagiaire['id']?>">Détails</a></td>
             <td>
               <a href="?update=<?= $stagiaire['id'] ?>" class="btn btn-sm btn-outline-info">Modifier</a>
               <form action="delete.php" method="POST" class="d-inline">
