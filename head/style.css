@@ -1,0 +1,64 @@
+
+/* Style pour le block qui contien les bouton doption et le 
+formulair d'inscription */
+h1{
+    text-align: center;
+
+}
+.block_1 {
+    max-width: 120vh;
+    
+    margin: 50px auto 50px auto;
+    
+    margin-top: 5%;
+    box-shadow: 0 0 10px #9c9a9a;
+    border-radius: 5px;
+}
+
+/* Style pour le block d'option */
+.option{
+    background-color: #4acccce8;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 50%;
+    padding-bottom: 50%;
+}
+
+.text-option{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.text-option_2{
+    color: #437777;
+    font-size: 15px;
+}
+
+
+/* Style pour le block du formulaire */
+.Inscription {
+    width: 100%;
+    padding: 15px;
+
+}
+
+.Inscription label {
+    font-weight: bold;
+}
+
+.submit {
+    width: 100%;
+}
+
+
+/* Style pour l photo */
+.image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
